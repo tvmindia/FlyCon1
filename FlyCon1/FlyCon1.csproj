@@ -201,6 +201,7 @@
     <Content Include="Content\Site.css" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="HtmlPage1.html" />
+    <Content Include="Images\delete1.png" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />

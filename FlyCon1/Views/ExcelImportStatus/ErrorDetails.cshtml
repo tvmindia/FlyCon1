@@ -9,11 +9,11 @@
 
 <table>
     <tr>
-        <th>
-           Key Field
+        <th th align="left">
+            Key Field
         </th>
         <th></th>
-        <th>
+        <th align="left">
           Error Description
         </th>
         <th></th>
@@ -21,6 +21,7 @@
 
 @foreach (var item in Model) {
     <tr>
+       
         <td>
             @Html.DisplayFor(modelItem => item.keyField)
         </td>
