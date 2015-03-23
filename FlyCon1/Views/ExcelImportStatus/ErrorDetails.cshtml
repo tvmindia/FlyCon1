@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ExcelUpload.Models.ExcelImportErrorDetails>
+
+@{
+    ViewBag.Title = "Excel Error Details";
+}
+
+<h2>Excel Import Error Details</h2>
+
+
+<table>
+    <tr>
+        <th>
+           Key Field
+        </th>
+        <th></th>
+        <th>
+          Error Description
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.keyField)
+        </td>
+        <td></td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ErrorDescription)
+        </td>
+     
+    </tr>
+}
+</table>
+<h3>@Html.ActionLink("Refresh", "ErrorDetails", "ExcelImportStatus")</h3>

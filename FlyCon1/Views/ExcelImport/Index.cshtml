@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1>Excel Import</h1>
+<h2>Select file</h2>
+@using (Html.BeginForm("Index", "ExcelImport", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <input type="file" name="file" required data-val="true" data-val-required="please select a file" />
+    <input type="submit" value="Upload" title="Click to upload file " />
+}
+
+@if (TempData["Message"] != null)
+{
+    <p style="color:orangered">@TempData["FileExtnsnErrorMessage"]</p>
+}
+
+
+ <h3>@Html.ActionLink("Show Import Details", "AllExcelImports", "ExcelImportStatus")</h3>
+

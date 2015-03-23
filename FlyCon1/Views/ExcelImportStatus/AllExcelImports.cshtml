@@ -1,0 +1,53 @@
+﻿@model IEnumerable<ExcelUpload.Models.ExcelImportStatusModel>
+
+@{
+    ViewBag.Title = "AllExcelImports";
+}
+
+<h2>All Excel Imports</h2>
+
+<table>
+    <tr>
+        <th>
+            File Name
+        </th>
+        <th></th>
+        <th>
+           Started Time
+        </th>
+        <th></th>
+        <th>
+           Status
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FileName)
+            </td>
+            <td></td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartTime)
+            </td>
+            <td></td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+          
+            <td>
+                
+                @Html.ActionLink("Details", "Index", "ExcelImportStatus", new { Id = item.StatusId },null) 
+            </td>
+            
+            <td>
+                <a href="@Url.Action("DeleteExcelImportDetails", "ExcelImportStatus", new { id = item.StatusId })" title="delete" onclick="return confirm('Are you sure you want to delete?');">
+                    <img src="~/Images/delete1.png" />
+                </a>
+            </td>
+            <td></td>
+        </tr>
+    }
+</table>
