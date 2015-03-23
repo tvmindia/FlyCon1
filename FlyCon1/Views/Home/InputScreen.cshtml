@@ -1,0 +1,401 @@
+﻿@{
+    ViewBag.Title = "InputScreen";
+    Layout = "~/Views/Shared/Master.cshtml";
+}
+<head>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <link href="~/Content/themes/InputScreen.css" rel="stylesheet" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script type="text/javascript" src="http://www.pureexample.com/js/lib/jquery.ui.touch-punch.min.js"></script>
+    <style></style>
+    <script>
+			// Wait until the DOM has loaded before querying the document
+        $(document).ready(function(){
+            //$('ul.tabs').each(function(){
+            //	// For each set of tabs, we want to keep track of
+            //	// which tab is active and it's associated content
+            //	var $active, $content, $links = $(this).find('a');
+
+            // If the location.hash matches one of the links, use that as the active tab.
+            // If no match is found, use the first link as the initial active tab.
+            //$active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+            //$active.addClass('active');
+
+            $('#List').find('a').addClass('active');
+          
+            //$content = $($active[0].hash);
+          
+            
+				//	// Hide the remaining content
+				//	$links.not($active).each(function () {
+				//		$(this.hash).hide();
+				//	});
+
+				//	// Bind the click event handler
+				//	$(this).on('click', 'a', function(e){
+				//		// Make the old tab inactive.
+				//		$active.removeClass('active');
+				//		$content.hide();
+
+				//		// Update the variables with the new link and content
+				//		$active = $(this);
+				//		$content = $(this.hash);
+
+				//		// Make the tab active.
+				//		$active.addClass('active');
+				//		$content.show();
+
+				//		// Prevent the anchor's default click action
+				//		e.preventDefault();
+				//	});
+				//});
+			});
+    </script>
+    @*<script>
+		$(function () {
+        $("#accordion").accordion({
+                heightStyle: "fill",
+                collapsible: true
+        });
+         var icons = {
+         header: "iconClosed",    // custom icon class
+         activeHeader: "iconOpen" // custom icon class
+     };
+     $("#accordion").accordion({
+         icons: icons
+     });
+        $("input").each(function () {
+                $(this).change(function () {
+                        if ($(this).attr("id") == "disableCollapsible    ") {
+                                $("#accordion").accordion("option", "collapsible", true);
+                        } else {
+                                $("#accordion").accordion("option", "collapsible", false);
+                        }
+
+                });
+        });
+
+});
+
+    </script>*@
+    <script>
+function showtab(id)
+{
+//alert(1);
+if(id=='tab2')
+{
+document.getElementById('tab23').style.display="";
+document.getElementById('tab2').style.display="none";
+	document.getElementById('backbtn').style.display="";
+
+}
+//alert(2);
+}
+    </script>
+    <script>
+function backtab(id)
+{
+//alert(1);
+if(id=='tab2')
+{
+document.getElementById('tab23').style.display="none";
+document.getElementById('tab2').style.display="";
+document.getElementById('backbtn').style.display="none";
+}
+//alert(2);
+}
+    </script>
+    <script>
+	 function Listtab(id)
+	 {
+	 if(id=='tab1')
+{
+document.getElementById('tab23').style.display="none";
+document.getElementById('tab2').style.display="none";
+document.getElementById('backbtn').style.display = "none";
+
+
+}
+
+//alert(2);
+}
+    </script>
+    <script>
+	 function backbtn(id)
+	 {
+		 if(id=='backbtn')
+		 {
+			document.getElementById('').style.display="none";
+
+		 }
+	 }
+    </script>
+    <script>
+        function gotoActivity(id) {
+        //alert(1);
+        if (id == 'tab2') {
+            document.getElementById('tab23').style.display = "none";
+            document.getElementById('tab2').style.display = "";
+            document.getElementById('backbtn').style.display = "none";
+            document.getElementById('tab1').style.display = "none";
+            $('#Activity').find('a').addClass('active');
+            $('#List').find('a').removeClass('active');
+        }
+        //alert(2);
+    }
+    </script>
+    <script type="text/javascript">
+        function selecttab(id)
+        {
+            if (id == 'tab2')
+            {
+                document.getElementById('tab2').style.display = "";
+                document.getElementById('tab1').style.display = "none";
+                document.getElementById('tab23').style.display = "none";
+                document.getElementById('backbtn').style.display = "none";
+                $('#Activity').find('a').addClass('active');
+                $('#List').find('a').removeClass('active');
+            }
+            else if (id == 'tab1')
+            {
+                document.getElementById('tab2').style.display = "none";
+                document.getElementById('tab1').style.display = "";
+                $('#List').find('a').addClass('active');
+                $('#Activity').find('a').removeClass('active');
+                document.getElementById('tab23').style.display = "none";
+                document.getElementById('backbtn').style.display = "none";
+            }
+
+    }
+    </script>
+</head>
+<body class="MyGradientClass" style=" background-repeat: no-repeat; background-size: cover;  background-image: url('../../ProjImages/bk8.jpg');">
+            <br> <br> <br> <br>
+           <div align= "center">
+        <nav class="nav2">
+            <ul class='tabs'>
+                <li>
+                    &nbsp;
+                </li>
+
+                <li class="nav2-li-left" id="Activity"><a href='#tab2' onclick="selecttab('tab2')">Activity</a></li>
+                <li class="nav2-li" id="List"><a href='#tab1'  onclick="selecttab('tab1')">List</a></li>
+                <li>
+                    &nbsp;
+                </li>
+            </ul>
+        </nav>
+
+        <div id='tab1' align="center" style="border:groove; width:90%; border-color:#009999;">
+            <table class="Table2Font table" width="100%" border="0" cellspacing="0" cellpadding="0" bordercolor="#9AA8A8"
+                   bgcolor="#008080"
+                   align="center">
+                <tr class="Table2Font" bgcolor="#85ADAD">
+                    <td>&nbsp;</td>
+                    <td>Project No</td>
+                    <td>Code</td>
+                    <td>Company Name</td>
+                    <td>Contact</td>
+                    <td></td>
+
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>CCMS001</td>
+                    <td>1</td>
+                    <td>Apco</td>
+                    <td>8281785506</td>
+                    <td><a href="#tab2" ><img src="~/ProjImages/arrow2.png" onclick="gotoActivity('tab2');"  /></a></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>CCMS001</td>
+                    <td>2</td>
+                    <td>Infosys</td>
+                    <td>8281625378</td>
+                    <td><a href="#tab2" ><img src="~/ProjImages/arrow2.png" onclick="gotoActivity('tab2');" /></a></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>CCMS001</td>
+                    <td>3</td>
+                    <td>TATA</td>
+                    <td>8281525378</td>
+                    <td><a href="#tab2" ><img src="~/ProjImages/arrow2.png" onclick="gotoActivity('tab2');" /></a></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>CCMS001</td>
+                    <td>4</td>
+                    <td>TCS</td>
+                    <td>9605499378</td>
+                    <td><a href="#tab2" ><img src="~/ProjImages/arrow2.png" onclick="gotoActivity('tab2');" /></a></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>CCMS001</td>
+                    <td>5</td>
+                    <td>CMC</td>
+                    <td>9605499379</td>
+                    <td><a href="#tab2" ><img src="~/ProjImages/arrow2.png" onclick="gotoActivity('tab2');" /></a></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>CCMS001</td>
+                    <td>6</td>
+                    <td>Accenture</td>
+                    <td>7293210350</td>
+                    <td><a href="#tab2" ><img src="~/ProjImages/arrow2.png" onclick="gotoActivity('tab2');" /></a></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>CCMS001</td>
+                    <td>1</td>
+                    <td>Apco</td>
+                    <td>8281785506</td>
+                    <td><a href="#tab2" ><img src="~/ProjImages/arrow2.png" onclick="gotoActivity('tab2');" /></a></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>CCMS001</td>
+                    <td>6</td>
+                    <td>Accenture</td>
+                    <td>7293210350</td>
+                    <td><a href="#tab2" ><img src="~/ProjImages/arrow2.png" onclick="gotoActivity('tab2');" /></a></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>CCMS001</td>
+                    <td>5</td>
+                    <td>CMC</td>
+                    <td>9605499379</td>
+                    <td><a href="#tab2" ><img src="~/ProjImages/arrow2.png" onclick="gotoActivity('tab2');" /></a></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id='tab2' style="border:groove; width:90%; border-color:#009999; display:none;" align="center">
+            <table class="Table2Font table" bgcolor="#008080" width="100%" border="0" cellspacing="0" cellpadding="0" bordercolor="#9AA8A8"
+                   align="center">
+                <tr bgcolor="#527A7A">
+                    <td>&nbsp;</td>
+                    <td>Name</td>
+                    <td>&nbsp;Date</td>
+                    <td>&nbsp;Status</td>
+                    <td>&nbsp;Details</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>Activity1</td>
+                    <td>11-2-2015</td>
+                    <td><img src="~/ProjImages/tick3.png" /></td>
+                    <td><img src="~/ProjImages/arrow2.png" onclick="showtab('tab2');" /></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>Activity2</td>
+                    <td>12-2-2015</td>
+                    <td><img src="~/ProjImages/tick3.png" /></td>
+                    <td><img src="~/ProjImages/arrow2.png" onclick="showtab('tab2');" /></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>Activity3</td>
+                    <td>13-2-2015</td>
+                    <td><img src="~/ProjImages/tick3.png" /></td>
+                    <td><img src="~/ProjImages/arrow2.png" onclick="showtab('tab2');" /></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>Activity4</td>
+                    <td>11-2-2015</td>
+                    <td><img src="~/ProjImages/tick3.png" /></td>
+                    <td><img src="~/ProjImages/arrow2.png" onclick="showtab('tab2');" /></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>Activity5</td>
+                    <td>10-2-2015</td>
+                    <td><img src="~/ProjImages/tick3.png" /></td>
+                    <td><img src="~/ProjImages/arrow2.png" onclick="showtab('tab2');" /></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>Activity6</td>
+                    <td>15-2-2015</td>
+                    <td><img src="~/ProjImages/tick3.png" /></td>
+                    <td><img src="~/ProjImages/arrow2.png" onclick="showtab('tab2');" /></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>Activity7</td>
+                    <td>14-2-2015</td>
+                    <td><img src="~/ProjImages/tick3.png" /></td>
+                    <td><img src="~/ProjImages/arrow2.png" onclick="showtab('tab2');" /></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>Activity8</td>
+                    <td>13-2-2015</td>
+                    <td><img src="~/ProjImages/tick3.png" /></td>
+                    <td><img src="~/ProjImages/arrow2.png" onclick="showtab('tab2');" /></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>Activity9</td>
+                    <td>12-2-2015</td>
+                    <td><img src="~/ProjImages/tick3.png" /></td>
+                    <td><img src="~/ProjImages/arrow2.png" onclick="showtab('tab2');" /></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id='backbtn' style="display:none;"><img src="~/ProjImages/arrowback.png" onclick="backtab('tab2');" /></div>
+ 
+    <div id='tab23' style="display:none;height:600px; width:100%;" align="center">
+        <iframe marginheight="0" marginwidth="0" frameborder="no" scrolling="no"
+                src='@Url.Action("MultiAccordion","Home")'style ="height:600px; width:70%; "></iframe>
+    </div>
+    <div style="height:30%;">
+    </div>
+
+    @*<div id="footer" style=" background-color:#1F2E2E; padding-bottom:0px;">
+        <dl>
+            <dt></dt>
+            <dd>
+                <a href="">link1</a>
+                <a href="">link2</a>
+                <a href="">link3</a>
+            </dd>
+            <dd>
+                <a href="">link1</a>
+                <a href="">link2</a>
+                <a href="">link3</a>
+            </dd>
+        </dl><br>
+        <dl>
+            <dt>
+            <dd>
+                <a href="">link1</a>
+                <a href="">link2</a>
+                <a href="">link3</a>
+            </dd>
+            <dd>
+                <a href="">link1</a>
+                <a href="">link2</a>
+                <a href="">link3</a>
+            </dd>
+            </dt>
+        </dl>
+        <p style="font-size: 0.6em; color:white;">©2015 Thrithvam</p>
+    </div>*@
+</body>

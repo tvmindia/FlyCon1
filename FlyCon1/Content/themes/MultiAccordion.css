@@ -1,0 +1,54 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+ .accordion {
+            margin: 0 0 30px;
+            border-top: 1px solid #DDD;
+            border-right: 1px solid #DDD;
+            border-left: 1px solid #DDD;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+         
+        }
+
+            .accordion dt {
+                border-bottom: 1px solid #DDD;
+            }
+
+            .accordion dd {
+                display: none;
+                padding: 20px;
+                border-bottom: 1px solid #DDD;
+               
+            }
+
+            .accordion dt {
+                cursor: pointer;
+                /*padding: 8px 15px;*/
+                background-color:#55c2c2;
+           
+                color:white;
+                margin: 0;
+            }
+
+                .accordion dt:before {
+                    /*content: "\25B6";*/
+                    content: url('../../ProjImages/accordiaarrow.png') ;
+                  
+                    padding-right: 5px;
+                  
+                }
+
+                .accordion dt.accordion-active:before {
+                    /*content: "\25BE";*/
+                      content:  url('../../ProjImages/accordiaarrowup.png');
+                    padding-right: 5px;
+                    
+                }
+
+                .accordion dt.accordion-active:hover {
+                    cursor: default;
+                }
+ 
+

@@ -1,0 +1,24 @@
+﻿@charset "utf-8";
+table table  tr td
+{
+color:#ffffff; /*white text*/
+font-family:"Segoe UI", "Segoe UI Light", "Segoe UI Semibold";
+font-size:13px;
+
+}
+table table  tr td:hover{
+/*background-color:#00CC99;*/
+color:#ffffff; /*white text*/
+box-shadow:rgba(70,70,70,1.00);
+}
+.HomeTiles
+{
+	width:200px;
+	 height:150px;
+	  text-align:center;
+}
+.HomeTiles:hover
+{
+	background-color:rgba(12,110,146,1.00);
+	
+}

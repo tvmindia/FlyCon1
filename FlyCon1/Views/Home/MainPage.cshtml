@@ -1,0 +1,162 @@
+﻿@{
+    ViewBag.Title = "MainPage";
+    Layout = "~/Views/Shared/Master.cshtml";
+}
+<link href="~/Content/themes/InputScreen.css" rel="stylesheet" />
+<script src="jquery.min.js"></script>
+<script src="jssor.slider.mini.js"></script>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script>
+  jQuery(document).ready(function () {
+
+
+		//alert("1");
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+//alert("2");
+	    var target = this.hash;
+	    var $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 700, 'swing', function () {
+
+	        window.location.hash = target;
+	    });
+	});
+    });
+</script>
+
+<script>
+function Login(id)
+{
+//alert(1);
+document.getElementById('Login').style.display="";
+document.getElementById('container').style.opacity=.5;
+
+//alert(2);
+}
+</script>
+</head>
+
+<body>
+    <div id='container' style="height:900px; width:100%; padding-top:20px;">
+
+        <div id="tabs-1" class="comments, hid" align="center" style="height:500px; width:100%; ">
+            <iframe marginheight="0" marginwidth="0" style="height:500px; width:100%;" frameborder="no" scrolling="no" align="middle"
+                    src='@Url.Action("MainPageIcons", "Home")'></iframe>
+        </div>
+
+        <div id="tabs-2" style=" background-size:cover; background-color:#d9d2d2;
+        background-repeat: no-repeat; height: 400px; width: 100%;" align="left">
+            <iframe frameborder="0" scrolling="no" width="1000" height="300" src='@Url.Action("Graph", "Home")'></iframe>
+        </div>
+
+        <div id="tabs-3" style="width:100%;" align="center">
+            <table>
+                <tr>
+                    <td>
+                        <fieldset>
+                            <legend>Products</legend>
+                            <label></label>
+                            <h5></h5>
+                        </fieldset>
+                    </td>
+                    <td>
+                        &nbsp;
+
+                    </td>
+                    <td>
+                        <fieldset>
+                            <legend>Products</legend>
+                            <label></label>
+                            <h5></h5>
+                        </fieldset>
+                    </td>
+                    <td>
+                        &nbsp;
+
+                    </td>
+                    <td>
+                        <fieldset>
+                            <legend>Products</legend>
+                            <label></label>
+                            <h5></h5>
+                        </fieldset>
+                    </td>
+                    <td>
+                        &nbsp;
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <fieldset>
+                            <legend>Products</legend>
+                            <label></label>
+                            <h5></h5>
+                        </fieldset>
+                    </td>
+                    <td>
+                        &nbsp;
+
+                    </td>
+                    <td>
+                        <fieldset>
+                            <legend>Products</legend>
+                            <label></label>
+                            <h5></h5>
+                        </fieldset>
+                    </td>
+                    <td>
+                        &nbsp;
+
+                    </td>
+                    <td>
+                        <fieldset>
+                            <legend>Products</legend>
+                            <label></label>
+                            <h5></h5>
+                        </fieldset>
+                    </td>
+                    <td>
+                        &nbsp;
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        @*<div id="footer" style=" background-color:#005252;">
+            <dl>
+                <dt></dt>
+                <dd>
+                    <a href="">link1</a>
+                    <a href="">link2</a>
+                    <a href="">link3</a>
+                </dd>
+                <dd>
+                    <a href="">link1</a>
+                    <a href="">link2</a>
+                    <a href="">link3</a>
+                </dd>
+            </dl><br>
+            <dl>
+                <dt>
+                <dd>
+                    <a href="">link1</a>
+                    <a href="">link2</a>
+                    <a href="">link3</a>
+                </dd>
+                <dd>
+                    <a href="">link1</a>
+                    <a href="">link2</a>
+                    <a href="">link3</a>
+                </dd>
+                </dt>
+            </dl>
+            <p style="font-size: 0.6em; color:white;">©2015 Thrithvam</p>
+        </div>*@
+    </div>
+    
+</body>

@@ -1,0 +1,166 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/Master.cshtml";
+}
+
+    @*<link href="~/Content/themes/WireFrame.css" rel="stylesheet" />*@
+@*<link href="~/Content/themes/index.css" rel="stylesheet" />*@
+
+<link href="~/Content/themes/InputScreen.css" rel="stylesheet" />
+    <script src="jquery.min.js"></script>
+
+
+    <script src="~/Scripts/jquery-1.11.2.min.js"></script>
+    <script src="~/Scripts/jssor.slider.mini.js"></script>
+
+    <script>
+        jQuery(document).ready(function () {
+
+            
+            //alert("1");
+            $('a[href^="#"]').on('click',function (e) {
+                e.preventDefault();
+                //alert("2");
+                var target = this.hash;
+                var $target = $(target);
+
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top
+                }, 700, 'swing', function () {
+
+                    window.location.hash = target;
+                });
+            });
+        });
+    </script>
+
+    <script>
+        function Login(id)
+        {
+            //alert(1);
+          
+            //document.getElementById('Login').style.backgroundColor="rgba(93,170,197,1.00)";
+            document.getElementById('container2').style.opacity=.5;
+            document.getElementById('Login').style.display="";
+            //alert(2);
+        }
+    </script>
+<body>
+    <div id='container2'>
+
+        <div id="tabs-1" class="comments" align="center" >
+            <iframe id="Slider"  frameborder="no" scrolling="no" align="middle"
+                    src='@Url.Action("Slider", "Home")'></iframe>
+        </div>
+
+        <div id="tabs-2" style=" background-size:cover; background-color:#d9d2d2;
+        background-repeat: no-repeat; height: 400px; width: 100%;" align="left">
+            <iframe frameborder="0" scrolling="no" width="1000" height="300" src='@Url.Action("Graph", "Home")' style=" background-color: #d9d2d2;"></iframe>
+        </div>
+
+
+        <div id="tabs-3" style="width:100%;" align="center">
+            <table>
+                <tr>
+                    <td>
+                        <fieldset>
+                            <legend>Products</legend>
+                            <label></label>
+                            <h5></h5>
+                        </fieldset>
+                    </td>
+                    <td>
+                        &nbsp;
+
+                    </td>
+                    <td>
+                        <fieldset>
+                            <legend>Products</legend>
+                            <label></label>
+                            <h5></h5>
+                        </fieldset>
+                    </td>
+                    <td>
+                        &nbsp;
+
+                    </td>
+                    <td>
+                        <fieldset>
+                            <legend>Products</legend>
+                            <label></label>
+                            <h5></h5>
+                        </fieldset>
+                    </td>
+                    <td>
+                        &nbsp;
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <fieldset>
+                            <legend>Products</legend>
+                            <label></label>
+                            <h5></h5>
+                        </fieldset>
+                    </td>
+                    <td>
+                        &nbsp;
+
+                    </td>
+                    <td>
+                        <fieldset>
+                            <legend>Products</legend>
+                            <label></label>
+                            <h5></h5>
+                        </fieldset>
+                    </td>
+                    <td>
+                        &nbsp;
+
+                    </td>
+                    <td>
+                        <fieldset>
+                            <legend>Products</legend>
+                            <label></label>
+                            <h5></h5>
+                        </fieldset>
+                    </td>
+                    <td>
+                        &nbsp;
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <div id='Login' style=" display: none;" align="center">
+        <div align="right"><a href='@Url.Action("Index", "Home")'> <img src="~/ProjImages/close button.png" width="28" height="32" alt="" /></a></div>
+        <table border="0" cellspacing="0" cellpadding="0" align="center">
+            <tbody class="Logininput">
+                <tr>
+                    <td><input id="Username" class="" name="Username" type="text" value="User Name" onfocus="if (this.value == 'User Name') {this.value = '';}" onblur="if (this.value == '') " /></td>
+              
+                 </tr>
+                <tr>
+                    <td><input  id="Password" class="" name="Password" type="text" value="Password" onfocus="if (this.value == 'Password') {this.value = '';}" onblur="if (this.value == '') " /></td>
+                  
+                </tr>
+
+            </tbody>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <a href='@Url.Action("MainPage", "Home")'>
+                        <img src="~/ProjImages/LoginArrow.png" width="48" height="48" alt="" />
+                    </a>
+                </td>
+            </tr>
+           
+        </table>
+
+    </div>
+</body>

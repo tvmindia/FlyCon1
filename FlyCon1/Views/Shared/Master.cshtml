@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+
+<html>
+<div id="container">
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title></title>
+
+        @*@Styles.Render("~/Content/themes/InputScreen.css")
+            @Styles.Render("~/Content/themes/WireFrame.css")*@
+        @*<link href="~/Content/themes/InputScreen.css" rel="stylesheet" />*@
+        @*<link href="~/Content/themes/WireFrame.css" rel="stylesheet" />*@
+        <link href="~/Content/themes/Master.css" rel="stylesheet" />
+        <div class="HeaderArea top" style="height:50px;">
+            <table class="table" width="100%" style="background-color:#3073D6; height:40px;">
+                <tr>
+                    <td style="width:4%">
+                        <img src="~/Images/LOgo.jpg" width="25" height="25" alt="" />
+                    </td>
+                    <td align="left" style="width:80%">
+                        <label class="HeaderArea, ProjectCaption">CCMS</label>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="Login(id);">Login</a></li>
+                    <li><a href="#tabs-3">Others</a></li>
+                    <li><a href="#tabs-2">Overview</a></li>
+                    <li><a href="#tabs-1">Projects</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </head>
+    <body>
+
+        <div id="main">
+
+            @RenderBody()
+
+
+            <div>
+
+            </div>
+            <div>
+
+            </div>
+            <div></div>
+            <div id="footer">
+                @RenderSection("footer", false)
+                <div class="content-wrapper">
+
+                    <div class="float-left">
+
+
+                       
+                    </div>
+                </div>
+            </div>
+
+            @*<p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>*@
+        </div>
+        
+    </body>
+    <div id="footer" style=" background-color:#005252; top:680px; position:relative;">
+        <dl>
+            <dt></dt>
+            <dd>
+                <a href="">link1</a>
+                <a href="">link2</a>
+                <a href="">link3</a>
+            </dd>
+            <dd>
+                <a href="">link1</a>
+                <a href="">link2</a>
+                <a href="">link3</a>
+            </dd>
+        </dl><br>
+        <dl>
+            <dt></dt>
+            <dd>
+                <a href="">link1</a>
+                <a href="">link2</a>
+                <a href="">link3</a>
+            </dd>
+            <dd>
+                <a href="">link1</a>
+                <a href="">link2</a>
+                <a href="">link3</a>
+            </dd>
+
+        </dl>
+        <p style="font-size: 0.6em; color:white;">©2015 Thrithvam</p>
+    </div>
+</html>

@@ -1,0 +1,212 @@
+﻿@{
+    ViewBag.Title = "MultiAccordion";
+}
+
+
+<head>
+    <link href="~/Content/themes/MultiAccordion.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.11.2.min.js"></script>
+   
+    <script>
+        jQuery(document).ready(function () {
+          
+      //Hide all panels
+   var allPanels = $('.accordion > dd').hide();
+          //  $('.accordion > dd').show();
+            //$('.accordion > dd').addClass('active').show();
+            //Show first panel
+//    alert(1);
+    $('.accordion > dd:first-of-type').show();
+      //Add active class to first panel
+    $('.accordion > dt:first-of-type').addClass('accordion-active');
+      //Handle click function
+      jQuery('.accordion > dt').on('click', function () {
+        
+          //this clicked panel
+          $this = $(this);
+          //the target panel content
+          $target = $this.next();
+          //Only toggle non-displayed
+          if (!$this.hasClass('accordion-active')) {
+
+              $this.addClass('accordion-active');
+              
+              //slide down target panel
+              $target.addClass('active').slideDown();
+
+          }
+
+          else {
+        
+
+              $target.slideUp();
+              $this.removeClass('accordion-active');
+
+
+
+          }
+          return false;
+      });
+
+  })(jQuery);
+    </script>
+        <script>
+          function  btnSave(id)
+            {
+                //alert(1);
+                  $('.accordion > dd').show();
+            }
+        </script>
+</head>
+<body style="height:200px; background:transparent">
+    <dl class="accordion" >
+        <dt id="Panel1">Panel 1</dt>
+        <dd style="background-color:transparent;">
+        <table class="accordion-section-table" cellspacing="0" cellpadding="0">
+            <tbody class="label">
+               
+                    <tr>
+                        <td><label id=lblbox1>aa</label></td>
+                        <td><input></td>
+                        <td width="10px">&nbsp;</td>
+                        <td><label>ab</label></td>
+                        <td><input></td>
+                    </tr>
+                    <tr>
+                        <td><label>ac</label></td>
+                        <td><input></td>
+                        <td width="10px">&nbsp;</td>
+                        <td><label>ad</label></td>
+                        <td><input></td>
+                    </tr>
+                    <tr>
+                        <td><label>ae</label></td>
+                        <td><input></td>
+                        <td width="10px">&nbsp;</td>
+                        <td><label>af</label></td>
+                        <td><input></td>
+                    </tr>
+                    <tr>
+                        <td><label>ar</label></td>
+                        <td><input></td>
+                        <td width="10px">&nbsp;</td>
+                        <td><label>aw</label></td>
+                        <td><input></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;
+
+                        </td>
+
+                    </tr>
+                    <tr style="column-span:4;" align="left">
+                        <td>
+                            @*<button style="background-color:#006666; color:white;">Submit </button>*@
+                            <form method='post'>
+                                <input type='submit' value='Save' name='signout' onclick="btnSave('Panel1');" style="background-color:#006666;color:white;">
+                                @*onclick=" btnSave()"*@
+                             </form>
+                </td>
+
+                </tr>
+               
+            </tbody>
+</table></dd>
+        <dt id="Panel2">Panel 2</dt>
+        <dd><table class="accordion-section-table" cellspacing="0" cellpadding="0">
+    <tbody class="label">
+        <tr>
+            <td><label id=lblbox1>aa</label></td>
+            <td><input></td>
+            <td width="10px">&nbsp;</td>
+            <td><label>ab</label></td>
+            <td><input></td>
+        </tr>
+        <tr>
+            <td><label>ac</label></td>
+            <td><input></td>
+            <td width="10px">&nbsp;</td>
+            <td><label>ad</label></td>
+            <td><input></td>
+        </tr>
+        <tr>
+            <td><label>ae</label></td>
+            <td><input></td>
+            <td width="10px">&nbsp;</td>
+            <td><label>af</label></td>
+            <td><input></td>
+        </tr>
+        <tr>
+            <td><label>ar</label></td>
+            <td><input></td>
+            <td width="10px">&nbsp;</td>
+            <td><label>aw</label></td>
+            <td><input></td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;
+
+            </td>
+
+        </tr>
+        <tr style="column-span:4;" align="left">
+            <td>
+                <form method='post'>
+                    <input type='submit' value='Save' name='signout' style="background-color:#006666;color:white;">
+                </form>
+            </td>
+
+        </tr>
+    </tbody>
+</table></dd>
+        <dt id="Panel3">Panel 3</dt>
+        <dd><table class="accordion-section-table" cellspacing="0" cellpadding="0">
+    <tbody class="label">
+        <tr>
+            <td><label id=lblbox1>aa</label></td>
+            <td><input></td>
+            <td width="10px">&nbsp;</td>
+            <td><label>ab</label></td>
+            <td><input></td>
+        </tr>
+        <tr>
+            <td><label>ac</label></td>
+            <td><input></td>
+            <td width="10px">&nbsp;</td>
+            <td><label>ad</label></td>
+            <td><input></td>
+        </tr>
+        <tr>
+            <td><label>ae</label></td>
+            <td><input></td>
+            <td width="10px">&nbsp;</td>
+            <td><label>af</label></td>
+            <td><input></td>
+        </tr>
+        <tr>
+            <td><label>ar</label></td>
+            <td><input></td>
+            <td width="10px">&nbsp;</td>
+            <td><label>aw</label></td>
+            <td><input></td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;
+
+            </td>
+
+        </tr>
+        <tr style="column-span:4;" align="left">
+            <td>
+                <button style="background-color:#006666; color:white;">Submit </button>
+
+            </td>
+
+        </tr>
+    </tbody>
+</table></dd>
+    </dl>
+</body>

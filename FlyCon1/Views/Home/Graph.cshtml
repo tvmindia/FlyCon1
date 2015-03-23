@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Graph";
+}
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+      google.load('visualization', '1', {packages: ['corechart']});
+</script>
+<script type="text/javascript">
+      function drawVisualization() {
+        // Create and populate the data table.
+        var data = google.visualization.arrayToDataTable([
+          ['Project', 'Percentage'],
+         ['O&G Qatar project 1',  20],
+          ['Shell Piping Project',  30],
+          ['Scada',  50],
+		    ['CampConstruction Dubai',  60],
+			  ['Metro Labour Camps',  70],
+
+        ]);
+
+        // Create and draw the visualization.
+        new google.visualization.BarChart(document.getElementById('visualization')).
+            draw(data,
+                 {title:"Middile East",
+                  width:900, height:300,
+                  backgroundColor: "transparent",
+				  titleTextStyle: {color: '#000000'},
+				  colors: ['#FF5930'],
+				   fontName: 'Segoe UI Light',
+				   legendTextStyle: { color: '#000000' },
+
+
+				   vAxis:{textStyle:{color: '#000000',fontSize: '12', paddingRight: '100',marginRight: '100', align: "left", } },
+
+    hAxis: { textStyle: { color: '#000000', fontSize: '12', paddingRight: '100', marginRight: '100'} } ,
+               hAxis:   {minValue: 0,
+                         maxValue: 100,},
+				 }
+
+            );
+      }
+
+
+      google.setOnLoadCallback(drawVisualization);
+</script>
+  <body style="font-family: Arial;border: 0 none;  background-color:#d9d2d2;">
+    <div id="visualization" style="width: 600px; height: 400px;"></div>
+</body>
