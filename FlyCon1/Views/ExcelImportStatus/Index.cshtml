@@ -1,0 +1,167 @@
+﻿@model IEnumerable<ExcelUpload.Models.ExcelImportStatusModel>
+
+@{
+    ViewBag.Title = "Excel Import Details";
+}
+
+<h2>Excel Import Details</h2>
+
+@foreach (var item in Model)
+{
+    <table>
+        <tr>
+            <th align="left">
+              Project No
+            </th>
+            <td></td>
+            <td>:</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjNo)
+            </td>
+        </tr>
+        <tr>
+            <th align="left">
+                File Name
+            </th>
+            <td></td>
+            <td>:</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FileName)
+            </td>
+        </tr>
+        <tr>
+            <th align="left">
+                Table Name
+            </th>
+            <td></td>
+            <td>:</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TableName)
+            </td>
+        </tr>
+        <tr>
+            <th align="left">
+                Start Time
+            </th>
+            <td></td>
+            <td>:</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartTime)
+            </td>
+        </tr>
+        <tr>
+            <th align="left">
+                Total Rows
+            </th>
+            <td></td>
+            <td>:</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalCount)
+            </td>
+        </tr>
+        <tr>
+            <th align="left">
+                Inserted Rows
+            </th>
+            <td></td>
+            <td>:</td>
+            <td>
+               @Html.DisplayFor(modelItem => item.InsertCount)
+            </td>
+        </tr>
+        <tr>
+            <th align="left">
+                Updated Rows
+            </th>
+            <td></td>
+            <td>:</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdateCount)
+            </td>
+        </tr>
+        <tr>
+            <th align="left">
+                Errors
+            </th>
+            <td></td>
+            <td>:</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ErrorCount)
+            </td>
+        </tr>
+        <tr>
+            <th align="left">
+                User
+            </th>
+            <td></td>
+            <td>:</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+        </tr>
+        <tr>
+            <th align="left">
+                Last Updated Time
+            </th>
+            <td></td>
+            <td>:</td>
+            <td>
+               
+               @Html.DisplayFor(modelItem => item.LastUpdatedTime)
+            </td>
+        </tr>
+        <tr>
+            <th align="left">
+                Status
+            </th>
+            <td></td>
+            <td>:</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+        </tr>
+        <tr>
+            <th align="left">
+                Remarks
+            </th>
+            <td></td>
+            <td>:</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remarks)
+            </td>
+        </tr>
+      @if (item.Status == "Processing") 
+      {
+        <tr>
+            <th align="left">
+                Time Remaining
+            </th>
+            <td></td>
+            <td>:</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeRemaining)
+            </td>
+        </tr>
+      }
+      else if (item.Status == "Finished")
+      {
+        <tr>      
+            <th align="left">
+                Time Elapsed
+            </th>
+            <td></td>
+            <td>:</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeElapsed)
+            </td>
+        </tr>
+      }
+        <tr>
+            <td><h3>@Html.ActionLink("Show Error Details", "ErrorDetails", "ExcelImportStatus", new { Id = item.StatusId }, null)</h3></td>
+        </tr>
+        <tr>
+            <td><h2>@Html.ActionLink("Refresh", "Index", "ExcelImportStatus")</h2></td>
+                 
+        </tr>
+</table>
+}

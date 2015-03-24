@@ -126,11 +126,22 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ExcelImportController.cs" />
+    <Compile Include="Controllers\ExcelImportStatusController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DAL\Constants.cs" />
+    <Compile Include="DAL\DBConnection.cs" />
+    <Compile Include="DAL\ExcelImportDAL.cs" />
+    <Compile Include="DAL\ExcelImportDetailsDAL.cs" />
+    <Compile Include="ExcelImportValidation.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ExcelImportErrorDetails.cs" />
+    <Compile Include="Models\ExcelImportStatusModel.cs" />
+    <Compile Include="Models\ExcelValidationModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdatedExcelImport.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -197,6 +208,7 @@
     <Content Include="Images\accent.png" />
     <Content Include="Images\blue.jpg" />
     <Content Include="Images\bullet.png" />
+    <Content Include="Images\delete1.png" />
     <Content Include="Images\heroAccent.png" />
     <Content Include="Images\LOgo.jpg" />
     <Content Include="ProjImages\1.jpg" />
@@ -365,10 +377,13 @@
     <Content Include="Views\Home\MultiAccordion.cshtml" />
     <Content Include="Views\Home\Slider.cshtml" />
     <Content Include="Views\Shared\Master.cshtml" />
+    <Content Include="Views\ExcelImportStatus\AllExcelImports.cshtml" />
+    <Content Include="Views\ExcelImportStatus\ErrorDetails.cshtml" />
+    <Content Include="Views\ExcelImportStatus\Index.cshtml" />
+    <Content Include="Views\ExcelImport\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
