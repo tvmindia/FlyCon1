@@ -34,17 +34,16 @@
 
                 .accordion dt:before {
                     /*content: "\25B6";*/
-                    content: url('../../ProjImages/accordiaarrow.png') ;
-                  
+                    content: url('../Images/LandingPageImages/accordiaarrow.png');
+                 
                     padding-right: 5px;
-                  
                 }
 
                 .accordion dt.accordion-active:before {
                     /*content: "\25BE";*/
-                      content:  url('../../ProjImages/accordiaarrowup.png');
+                    content: url('../Images/LandingPageImages/accordiaarrowup.png');
+                
                     padding-right: 5px;
-                    
                 }
 
                 .accordion dt.accordion-active:hover {
