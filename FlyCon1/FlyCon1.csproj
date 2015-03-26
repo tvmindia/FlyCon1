@@ -172,7 +172,7 @@
     <Content Include="bin\System.Web.WebPages.Razor.xml" />
     <Content Include="bin\System.Web.WebPages.xml" />
     <Content Include="bin\WebGrease.dll" />
-    <Content Include="Content\Images\LandingPageImages\a01 - Copy.png" />
+    <Content Include="Content\Images\LandingPageImages\a01copy.png" />
     <Content Include="Content\Images\LandingPageImages\a01.png" />
     <Content Include="Content\Images\LandingPageImages\a02 - Copy.png" />
     <Content Include="Content\Images\LandingPageImages\a02.png" />
