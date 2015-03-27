@@ -218,6 +218,7 @@
     <Content Include="Content\Images\LandingPageImages\bk8.jpg" />
     <Content Include="Content\Images\LandingPageImages\blue.jpg" />
     <Content Include="Content\Images\LandingPageImages\browser-icons.png" />
+    <Content Include="Content\Images\LandingPageImages\close button.png" />
     <Content Include="Content\Images\LandingPageImages\close.png" />
     <Content Include="Content\Images\LandingPageImages\dashboard.png" />
     <Content Include="Content\Images\LandingPageImages\graphs.png" />
@@ -225,6 +226,7 @@
     <Content Include="Content\Images\LandingPageImages\Icon-Slider-12-No-jQuery.png" />
     <Content Include="Content\Images\LandingPageImages\loading.gif" />
     <Content Include="Content\Images\LandingPageImages\loading2.gif" />
+    <Content Include="Content\Images\LandingPageImages\LoginArrow.png" />
     <Content Include="Content\Images\LandingPageImages\LOgo.jpg" />
     <Content Include="Content\Images\LandingPageImages\MileStones.png" />
     <Content Include="Content\Images\LandingPageImages\newimg.jpg" />
